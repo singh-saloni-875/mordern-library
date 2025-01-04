@@ -1,43 +1,46 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    font-family: 'Roboto', sans-serif;;
+    /* line-height: 1.6; */
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: linear-gradient(to bottom, #f9f9f9, #ececec);
 }
-/* intro section */ 
-.Inroduction{
-  
-    background-color:#f9f9f9;
-    color:#333;
-    padding: 50px;
+
+/* intro section */
+.Inroduction {
+
+    background-color: #f9f9f9;
+    color: #000000;
+    padding-top: 50px;
     text-align: center;
     border-radius: 10px;
-    /* margin: 20px, auto; */
-    max-width: 80%;
+    margin: 20px, auto;
+    max-width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
 }
- .intro-container h2{
+
+.intro-container h2 {
     font-size: 2.5rem;
     color: #222b35;
     margin-bottom: 20px;
     padding: 3px;
 
 }
-.intro-container p{
+
+.intro-container p {
     font-size: 1.5rem;
     line-height: 1.7;
-    color: #3d3c3c;
+    color: #000000;
     margin-bottom: 20px;
     padding: 10px;
 
 }
 
-.intro-container{
+.intro-container {
     background-color: #dbdcdd;
     text-align: center;
-} 
+}
 
 
 
@@ -78,17 +81,53 @@ header nav a {
 
 header nav a:hover {
     color: #ffd700;
-    /* Highlight on hover */
 }
 
-/* Service Section */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1.5rem;
-    margin: 2rem auto;
-    padding: 1rem;
+/* gallery */
+#galleryButton{
+   background: rgb(37, 37, 37);
+   color: #fff;
+   padding: 10px;
+   font-size: large;
+   font-weight: 300;
+   margin: 20px;
+   cursor: pointer;
 }
+/* rating  */
+.rating-section {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.stars span {
+    font-size: 2rem;
+    cursor: pointer;
+    color: gray;
+}
+
+.stars span:hover,
+.stars span.selected {
+    color: gold;
+}
+
+textarea {
+    width: 90%;
+    margin-top: 1rem;
+    padding: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.7rem 1.5rem;
+    background-color: #40af40;
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Service Section */
 
 #service {
     background: #fff;
@@ -96,14 +135,20 @@ header nav a:hover {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1rem;
-    background-color: #dbdcdd;
+    background-color: #1a1e22;
+    color: #fff;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem auto;
+    padding: 1rem;
 }
 
 #service:hover {
     transform: scale(1.05);
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 6px 15px rgba(160, 13, 13, 0.2);
 }
 
 #service ul {
@@ -115,11 +160,12 @@ header nav a:hover {
 #service li {
     margin: 0.5rem 0;
     font-size: 2rem;
-    color: #444;
+    color: #ffffff;
 }
 
 /* Feedback Section */
 #feedback {
+    
     text-align: center;
     margin-top: 2rem;
 }
@@ -155,27 +201,35 @@ header nav a:hover {
 }
 
 /* FAQ Section */
-#faq .faq-item {
-    background: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1rem;
+.faq-item {
     margin: 1rem 0;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-#faq .faq-item h3 {
+.faq-question {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    border: none;
+    width: 100%;
+    text-align: left;
     cursor: pointer;
-    color: #333;
     font-size: 1.2rem;
+   text-align: center;
 }
 
-#faq .faq-item p {
+.faq-answer {
+    background: #f9f9f9;
+    color: #333;
+    padding: 0.8rem;
     display: none;
+    border: 1px solid #ddd;
     margin-top: 0.5rem;
-    font-size: 1rem;
-    color: #555;
 }
+
+.faq-question:hover {
+    background: #444;
+}
+
 
 /* Contact Section */
 #contact form {
@@ -214,27 +268,32 @@ footer {
     background: #333;
     color: #fff;
     margin-top: 2rem;
-    
+
 }
-.foot-content{
+
+.foot-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-footer p{
+
+footer p {
     font-size: small;
     margin: 2px;
-    
+
 }
-footer h4{
+
+footer h4 {
     margin: 8px;
 }
-footer a{
+
+footer a {
     color: white;
     text-decoration: none;
-  
+
 }
-footer a:hover{
+
+footer a:hover {
     color: #ffd700;
     font-weight: 400;
 }
@@ -242,17 +301,18 @@ footer a:hover{
 /* slider */
 .slider {
     position: relative;
-    width: 70%;
+    width: 100%;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
-    height: 600px;
+    height: 70vh;
     /* align-items: center; */
     margin: 6 auto;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     /* background-color: #ffd700; */
 }
-.slide img{
+
+.slide img {
 
     width: 100%;
     height: auto;
@@ -303,9 +363,89 @@ footer a:hover{
 
 .map-container {
     margin: 1rem auto;
-    width: 80%;
+    width: 90%;
     max-width: 1000px;
     border: 1px solid #ddd;
     border-radius: 8px;
     overflow: hidden;
 }
+
+
+
+/* for responsiv */
+@media (max-width: 768px) {
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    #gallery {
+        margin: 1rem;
+    }
+}
+
+/* responsive  all secton*/
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header img {
+        margin: 0 auto;
+    }
+
+    header nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header nav a {
+        display: block;
+        margin: 5px 0;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .Inroduction {
+        padding: 20px;
+        font-size: 1rem;
+    }
+
+    .intro-container h2 {
+        font-size: 1.5rem;
+    }
+
+    .intro-container p {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .services {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    #service {
+        margin: 10px auto;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .faq-item h3 {
+        font-size: 1.2rem;
+    }
+
+    .faq-item p {
+        font-size: 1rem;
+    }
+}
+
