@@ -62,7 +62,7 @@ feedbackForm.addEventListener('submit', (e) => {
 
 // animation
 document.addEventListener("DOMContentLoaded", () => {
-    const words = ["Welcome!", "Discover!", "Explore!", "the World!", " of Knowledge!"];
+    const words = ["Welcome!", "Discover!", "Explore!", "the World!", " of!", "Knowledge!"];
     let i = 0;
     setInterval(() => {
         document.getElementById("animation").innerText = words[i];
