@@ -1,9 +1,39 @@
 body {
+    box-sizing: border-box;
     font-family: 'Roboto', sans-serif;;
     /* line-height: 1.6; */
     margin: 0;
     padding: 0;
     background: linear-gradient(to bottom, #f9f9f9, #ececec);
+}
+/* animation */
+.animation-text{
+    font-size: 3rem;
+    text-align: center;
+    color: #ff5722;
+    margin: 10px;
+    height: 40px;
+    font-weight: 900;
+}
+@keyframes typing{
+    from {
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid #333;
+    animation: typing 3s steps(20) infinite, blink 0.5s step-end infinite;
 }
 
 /* intro section */
@@ -58,29 +88,103 @@ h3 {
     text-align: center;
 }
 
-header {
-    background: #333;
-    color: #fff;
-    padding: 1rem 0;
+
+/* nav bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333333;
+    color: #ffffff;
+    padding: 10px 20px;
+}
+
+.navbar-list {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    gap: 15px;
 }
 
-header img {
-    margin-left: 1rem;
-}
-
-header nav a {
-    margin: 0 15px;
-    color: #fff;
+.navbar-list a {
     text-decoration: none;
+    color: #ffffff;
     font-size: 1rem;
     font-weight: bold;
+    cursor: pointer;
 }
 
-header nav a:hover {
-    color: #ffd700;
+.navbar-list a:hover {
+    color: yellow;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Desktop Items */
+.desktop-only {
+    display: none;
+}
+
+/* Show Items */
+.always-show {
+    display: inline-block;
+}
+
+/* Mobile Menu (Initially Hidden) */
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #444444;
+    padding: 10px;
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 10;
+    border-radius: 8px;
+}
+
+.mobile-menu a {
+    margin: 10px 0;
+    color: white;
+}
+
+/* Responsive Design */
+@media (min-width: 1024px) {
+    .desktop-only {
+        display: inline-block;
+    }
+
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hamburger {
+        display: inline-block;
+    }
+
+    .mobile-menu {
+        display: none; /* Hidden until toggled */
+    }
+
+    .mobile-menu.show {
+        display: flex;
+    }
+
+    .desktop-only {
+        display: none;
+    }
 }
 
 /* gallery */
@@ -92,6 +196,12 @@ header nav a:hover {
    font-weight: 300;
    margin: 20px;
    cursor: pointer;
+}
+#galleryButton:hover{
+    background: #ffd700;
+    color: #000;
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 /* rating  */
 .rating-section {
@@ -108,6 +218,9 @@ header nav a:hover {
 .stars span:hover,
 .stars span.selected {
     color: gold;
+    text-shadow: 0 0 5px gold;
+    transform: scale(1.2);
+    transition: all 0.3s ease;
 }
 
 textarea {
@@ -176,9 +289,13 @@ button {
     align-items: center;
     gap: 1rem;
 }
-
+#feedback-form input{
+    color: white;
+}
 #feedback-form input,
 #feedback-form textarea {
+    /* ackground: #d4d1d1;
+    b */
     width: 80%;
     padding: 0.8rem;
     border: 1px solid #ddd;
@@ -272,8 +389,6 @@ footer {
 }
 
 .foot-content {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -445,6 +560,21 @@ footer a:hover {
     }
 
     .faq-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+    .intro-container h2{
+        font-size: 1.8rem;
+
+    }
+    .intro-container{
         font-size: 1rem;
     }
 }

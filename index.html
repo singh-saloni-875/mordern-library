@@ -6,32 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library Website</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style1.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <header>
-        <!-- <img src="font 3.webp" width="80px" height="80px"> -->
-        <img src="logo-m.jpg" width="200" height="50">
-        <nav>
+    <!-- navbar  -->
+    <nav class="navbar">
+        <div class="navbar-list">
+            <img src="logo-m.jpg" width="200" height="50">
+            <a class="desktop-only" href="#feedback">Feedback</a>
+            <a class="desktop-only" href="rule.html">Rules</a>
+            <a class="desktop-only" href="#faq">FAQ</a>
+            <a class="desktop-only" href="#contact">Contact</a>
+            <a class="always-show" href="tel:+919198761145">&#9742; +91 9198761145</a>
+            <a class="always-show" href="https://wa.me/9198761145" target="_blank">
+                <i class="fa-brands fa-whatsapp"></i>
+            </a>
+            <a class="always-show" href="#services">Services</a>
+            <button class="hamburger" onclick="toggleMenu()">☰</button>
+        </div>
+    </nav>
+    <div id="mobile-menu" class="mobile-menu">
+        <a href="#feedback">Feedback</a>
+        <a href="#faq">FAQ</a>
+        <a href="rule.html">Rules</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <!-- animation -->
+    <div id="animation" class="animation-text"></div>
 
-            <a href="#services">Services</a>
-            <a href="#feedback">Feedback</a>
-            <a href="#faq">FAQ</a>
-            <a href="#contact">Contact</a>
-            <a href="tel: +91 6392772210>"> &#9742; +91 6392772210</a>
-            <a href="/" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
-        </nav>
-
-
-    </header>
     <!-- introduction -->
     <div class="Inroduction">
         <div class="intro-container">
-            <h2>Welcome to Modern Library</h2>
+            <h2>Read, Learn, Transform at Modern Library</h2>
             <img src="logo-m.jpg" width="200" height="50">
-            <p><b>Morden Library</b> is more then a library - it's your second home for productivity and growth.
-                At <b>Modern Library</b>, we provide a serene and inspiring Environment for learners, Job seeker, and book
+            <p><b>Modern Library</b> is more then a library - it's your second home for productivity and growth.
+                At <b>Modern Library</b>, we provide a serene and inspiring Environment for learners, Job seeker, and
+                book
                 enthusisats alike. Our state-of-the-art facilities,
                 combined with 24/7 accessibility, ensure that you can focus on achieving your goals at any time. Weather
                 you're here for a Peaceful study session
@@ -56,10 +68,10 @@
     <!-- gallery button -->
 
     <button id="galleryButton">View Photo Gallery</button>
-    
+    <!-- <section id="gallery-section">
+    </section> -->
 
     <!-- services -->
-
     <section id="services">
         <h2>Our Services</h2>
         <div id="service">
@@ -106,7 +118,7 @@
     <section id="feedback">
         <h2>Feedback</h2>
         <form id="feedback-form">
-            <input type="text" placeholder="Your Name" required>
+            <input type="text" placeholder="Your Name" color="white" required>
             <textarea placeholder="Your Feedback" required></textarea>
             <button type="submit">Submit</button>
         </form>
@@ -147,14 +159,14 @@
             </div>
         </div>
         <div class="faq-item">
-            <button class="faq-question">what is the timings of the library?</button>
+            <button class="faq-question">what are the timings of the library?</button>
             <div class="faq-answer">We have a flexible time schedule. Student can visit the library any time and any
                 number of times.</div>
         </div>
         <div class="faq-item">
             <button class="faq-question">How safe is the library's enviroment for girls?</button>
-            <div class="faq-answer">We have a 24*7 Security at the library. Cameras and also have So many Female
-                student, So girls never
+            <div class="faq-answer">The library is equipped with 24/7 security, cameras, and had many female students to
+                ensure a safe enviroment. So girls never
                 feels unsafe.</div>
         </div>
         <div class="faq-item">
@@ -190,9 +202,8 @@
         <div class="map-container">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3564.683696397432!2d83.48775669999999!3d26.690596799999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39915d9af445b891%3A0x532dd15bc96e6bd0!2sYogi%20Pandit%20Rammurti%20Memorial%20Modern%20Public%20Inter%20College!5e0!3m2!1sen!2sin!4v1735799765396!5m2!1sen!2sin"
-                width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade" width="100%" height="400" style="border:0;"
-                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="400"
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
             </iframe>
         </div>
     </section>
@@ -219,7 +230,7 @@
             </div>
         </div>
         <br>
-        <p>&copy; 2006-2025 morden Library & study Rooms. All right reserved || Pramveer Chaudhary.</p>
+        <p>&copy; 2006-2025 modern Library & study Rooms. All right reserved. || Paramveer Chaudhary.</p>
     </footer>
 
     <script src="script.js"></script>
